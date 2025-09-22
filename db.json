@@ -1,0 +1,15 @@
+{
+  "students": [
+    {
+      "id": "1973",
+      "fullName": "Ashish Soni",
+      "email": "ashish@gmail.com",
+      "phone": "07568380270",
+      "dob": "2025-09-10",
+      "gender": "Male",
+      "address": "HH-1",
+      "course": "mca",
+      "password": "U2FsdGVkX1+0GWYAehDceu6t0l4VlSTsK3RrUtlqduE="
+    }
+  ]
+}

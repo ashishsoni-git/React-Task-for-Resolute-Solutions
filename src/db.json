@@ -1,3 +1,15 @@
 {
-  "students": []
+  "students": [
+    {
+      "id": "aa37",
+      "fullName": "U2FsdGVkX188QGr7MtmJXfvSDWoGA2ai56WTHberttg=",
+      "email": "U2FsdGVkX18KqRf+UUeEs7wawOfYBxc/LaUAvJoTcv6CkjIsH/a1nrE59gIWWZMM",
+      "phone": "U2FsdGVkX188eSLhi/+MAaEL+4gvxM524+6/esfJp5Y=",
+      "dob": "U2FsdGVkX19w/lu2NrehTS6QFLDtUx60tEVu8nSadqY=",
+      "gender": "U2FsdGVkX1/LjnBzEAAo3HWIFUesXXSxfhj+YXHpwMM=",
+      "address": "U2FsdGVkX1/Dp7tK+WIUajRmBK8vSnH7qLxQ4Ldwt+8=",
+      "course": "U2FsdGVkX19VJ2pq9n409pZfb61SPM1UUeZkvHYieZ0=",
+      "password": "U2FsdGVkX1906WTPJP887aH531RuaCImmd3TBAK5sik="
+    }
+  ]
 }

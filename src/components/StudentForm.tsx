@@ -16,7 +16,7 @@ const StudentForm: React.FC<StudentFormProps> = ({ onStudentAdded }) => {
     course: "",
     password: "",
   });
-  
+
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleChange = (e: any) => {
@@ -26,17 +26,19 @@ const StudentForm: React.FC<StudentFormProps> = ({ onStudentAdded }) => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
+
     try {
+      // Encrypt each field separately
+      const encryptedData = Object.fromEntries(
+        Object.entries(form).map(([key, value]) => [key, encrypt(value)])
+      );
+
       const response = await fetch("http://localhost:5000/students", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({
-          ...form,
-          password: encrypt(form.password),
-        }),
+        body: JSON.stringify(encryptedData),
       });
 
       if (response.ok) {

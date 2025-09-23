@@ -107,16 +107,17 @@ const StudentList: React.FC<StudentListProps> = ({
     <div style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
       <h2>Student List</h2>
       {students && students.length >= 1 ? (
-        <table border={1}>
+        <div style={{maxWidth:"1700px", overflowX:"auto"}}>
+          <table border={1}>
           <thead>
             <tr>
-              <th>Full Name</th>
-              <th>Email</th>
-              <th>Phone Number</th>
-              <th>Date of Birth</th>
-              <th>Gender</th>
-              <th>Address</th>
-              <th>Course</th>
+              <th>Encrypted Full Name</th>
+              <th>Encrypted Email</th>
+              <th>Encrypted Phone Number</th>
+              <th>Encrypted Date of Birth</th>
+              <th>Encrypted Gender</th>
+              <th>Encrypted Address</th>
+              <th>Encrypted Course</th>
               <th>Encrypted Password</th>
               <th>Actions</th>
             </tr>
@@ -140,6 +141,7 @@ const StudentList: React.FC<StudentListProps> = ({
             ))}
           </tbody>
         </table>
+        </div>
       ) : (
         <p>No students found. Add a student to get started!</p>
       )}

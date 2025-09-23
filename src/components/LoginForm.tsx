@@ -20,20 +20,39 @@ interface LoginFormProps {
 const LoginForm: React.FC<LoginFormProps> = ({ students }) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [loggedInUser, setLoggedInUser] = useState<string | null>(
+    localStorage.getItem("sessionUser")
+  );
 
   const handleLogin = async (e: React.FormEvent) => {
     e.preventDefault();
 
-    const student = students.find((s) => s.email === email);
+    const student = students.find((s) => decrypt(s.email) === email);
 
     if (student && decrypt(student.password) === password) {
       alert("Login successful!");
+      localStorage.setItem("sessionUser", student.email);
+      setLoggedInUser(student.email);
       setEmail("");
       setPassword("");
     } else {
       alert("Invalid email or password");
     }
   };
+
+  const handleLogout = () => {
+    localStorage.removeItem("sessionUser");
+    setLoggedInUser(null);
+  };
+
+  if (loggedInUser) {
+    return (
+      <div>
+        <h2>Welcome, {decrypt(loggedInUser)}</h2>
+        <button onClick={handleLogout}>Logout</button>
+      </div>
+    );
+  }
 
   return (
     <form onSubmit={handleLogin}>

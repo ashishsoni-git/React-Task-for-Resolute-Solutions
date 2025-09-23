@@ -57,6 +57,7 @@ Update & delete student records
 JSON Server mock API
 
 # Screenshots
+<img width="1918" height="906" alt="Screenshot 4" src="https://github.com/user-attachments/assets/e652caa1-d249-4917-b347-8e46940c8354" />
 <img width="1918" height="903" alt="Screenshot 3" src="https://github.com/user-attachments/assets/0f6a8ed7-977a-4428-aec6-9a0b60b1c756" />
 <img width="1918" height="907" alt="Screenshot 2" src="https://github.com/user-attachments/assets/15f67220-65ac-4643-a5b6-21aac121b6fb" />
 <img width="1917" height="900" alt="screenshot 1" src="https://github.com/user-attachments/assets/0b501aef-5f70-4fde-8dca-7c3c26e2a903" />

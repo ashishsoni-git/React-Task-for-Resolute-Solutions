@@ -26,6 +26,7 @@ const LoginForm: React.FC<LoginFormProps> = ({ students }) => {
 
   const handleLogin = async (e: React.FormEvent) => {
     e.preventDefault();
+    window.location.reload();
 
     const student = students.find((s) => decrypt(s.email) === email);
 
@@ -43,6 +44,7 @@ const LoginForm: React.FC<LoginFormProps> = ({ students }) => {
   const handleLogout = () => {
     localStorage.removeItem("sessionUser");
     setLoggedInUser(null);
+    window.location.reload();
   };
 
   if (loggedInUser) {
